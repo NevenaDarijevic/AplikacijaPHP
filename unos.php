@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="new_style.css">
-    <title>Inventar</title>
+    <title>HR SEKTOR</title>
     <script
     src="https://code.jquery.com/jquery-3.5.1.min.js"
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
@@ -29,18 +29,19 @@
                 <input  class="form_control" type="text"name="fime" id="ime"><span id="ime_error"></span><br>
             </div>
             <div class="form-group">
+                <label for="fprezime">Prezime:</label><br>
+                <input class="form_control" type="text"name="fprezime" id="prezime"><span id="prezime_error"></span><br>
+            </div>
+            <div class="form-group">
                 <label for="fsss">Stepen strucne spreme:</label>
-                    <select name="fss">
+                    <select name="fsss">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                        
                     </select><br>
             </div>
-            <div class="form-group">
-                <label for="fprezime">Prezime:</label><br>
-                <input class="form_control" type="text"name="fprezime" id="prezime"><span id="prezime_error"></span><br>
-            </div>
+           
             <div class="form-group">
                 <label for="fgrad">Grad:</label><br>
                 <input class="form_control" type="text"name="fgrad" id="grad"><span id="grad_error"></span><br><br>

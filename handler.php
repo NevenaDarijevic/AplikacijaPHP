@@ -3,14 +3,14 @@ include "radnik.php";
 $k=new Radnik;
 
 if(isset($_POST["insert"])){
-        $kafa=array(
+        $radnik=array(
             "id"=> $_POST["fid"],
             "ime"=> $_POST["fime"],
-            "stepenstrucnespreme"=> $_POST["fss"],
+            "stepenstrucnespreme"=> $_POST["fsss"],
             "prezime"=> $_POST["fprezime"],
             "grad"=> $_POST["fgrad"]  
         );
-        if($k->insert_radnik("radnik",$radnik)){
+        if($k->insert_radnik("radnici",$radnik)){
             echo "<script>
                     alert('Uspesno ste ubacili radnika u bazu zaposlenih!');
                     window.location.href='unos.php';
@@ -31,11 +31,11 @@ if(isset($_POST["update"])){
         $id=$_POST["fid"];
         $radnik=array(
             "ime"=> $_POST["fime"],
-            "stepenstrucnespreme"=> $_POST["fss"],
+            "stepenstrucnespreme"=> $_POST["fsss"],
             "prezime"=> $_POST["fprezime"],
             "grad"=> $_POST["fgrad"]  
         );
-        if($k->update_po_id("radnik",$radnik,$id)){
+        if($k->update_po_id("radnici",$radnik,$id)){
             echo "<script>
                     alert('Uspesno ste izmenili podatke o radniku!');
                     window.location.href='show.php';

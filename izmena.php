@@ -16,7 +16,7 @@
     include "radnik.php";
     $obj=new Radnik;
     $id=$_GET['id'];
-    $red=$obj->select_po_id("radnik",$id);
+    $red=$obj->select_po_id("radnici",$id);
 
 ?>
 <body>
@@ -37,25 +37,26 @@
             <input type="text"name="fime" class="form_control" value="<?php echo $red["ime"];?>" id="ime"><span id="ime_error"></span><br>
         </div>
         <div class="form-group">
+            <label for="fprezima">Prezime:</label><br>
+            <input type="text" name="fprezime" class="form_control" value="<?php echo $red["prezime"];?>" id="prezime"><span id="prezime_error"></span><br>
+        </div>
+        <div class="form-group">
             <label for="fsss">Stepen strucne spreme:</label>
-                <select name="fss">
+                <select name="fsss">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     
                 </select><br>
         </div>
-        <div class="form-group">
-            <label for="fprezima">Prezime:</label><br>
-            <input type="text" name="fprezime" class="form_control" value="<?php echo $red["prezime"];?>" id="prezime"><span id="prezime_error"></span><br>
-        </div>
+       
         <div class="form-group">
             <label for="fgrad">Grad:</label><br>
             <input type="text" name="fgrad" class="form_control" value="<?php echo $red["grad"];?>" id="grad"><span id="grad_error"></span><br>
         </div> 
             <input  class="btn btn-primary" type="submit" name="update" value="Izmeni zaposlenog"><br><br><br>
 
-            <a href="show.php" class="btn btn-secondary">Prikazi bazu</a>     
+            <a href="show.php" class="btn btn-secondary">Prikazi bazu zaposlenih radnika</a>     
 
         </form>
     </div>

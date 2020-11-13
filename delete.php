@@ -1,4 +1,5 @@
 <?php
+//ZA BRISANJE RADNIKA IZ BAZE
 include "show.php";
 if(isset($_POST['id'])) {
     $id=$_POST['id'];

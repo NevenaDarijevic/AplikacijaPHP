@@ -4,7 +4,7 @@ $k=new HRZaposleni;
 
 if(isset($_POST["fime"]) && isset($_POST["fprezime"]) && isset($_POST["femail"]) && isset($_POST["fuser"]) && isset($_POST["fpass"])){
     if($_POST["fime"]!=null && $_POST["fprezime"]!=null && $_POST["femail"]!=null && $_POST["fuser"]!=null && $_POST["fpass"]!=null){    
-        $novi_korisnik=array(
+        $novi_hr=array(
             "ime"=> $_POST["fime"],
             "prezime"=> $_POST["fprezime"],
             "email"=> $_POST["femail"],
@@ -20,7 +20,7 @@ if(isset($_POST["fime"]) && isset($_POST["fprezime"]) && isset($_POST["femail"])
     }
 
     else{
-        echo "Molimo vas da popunite sva polja!";
+        echo "Molimo Vas da popunite sva polja!";
     }
 
     $_POST = array();

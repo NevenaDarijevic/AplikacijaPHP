@@ -7,41 +7,43 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="new_style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <title>Inventar</title>
+    <title>HR SEKTOR</title>
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <?php
-    include "kafa.php";
-    $obj=new Kafa;
+    include "radnik.php";
+    $obj=new Radnik;
 ?>
 <body>
     <div class="container">
-        <h1>Nase kafe</h1>
+        <h1>Baza zaposlenih radnika</h1>
     <div class="container">
         <table id="myTable" class="table table-bordered">
             <tr>
+            <!--PITATI MAJU STA JE OVO OVDE-->
                 <th title="Ne mozes sortirati po ID">ID</th>
-                <th title="Sortiraj po imenu">Kafa <i class="fas fa-sort"></i></th>
-                <th title="Sortiraj po zemlji porekla">Zemlja porekla <i class="fas fa-sort"></i></th>
-                <th title="Sortiraj po ceni">Cena <i class="fas fa-sort"></i></th>
-                <th title="Sortiraj po kolicini">Kolicina <i class="fas fa-sort"></i></th>
+                <th title="Sortiraj po imenu">Radnik <i class="fas fa-sort"></i></th>
+                <th title="Sortiraj po prezimenu">Prezime <i class="fas fa-sort"></i></th>
+                <th title="Sortiraj po stepenu strucne spreme">Stepen strucne spreme <i class="fas fa-sort"></i></th>
+                <th title="Sortiraj po gradu">Grad <i class="fas fa-sort"></i></th>
                 <th>&nbsp;</th>
                 <th>&nbsp;</th>
             </tr>
 
             <?php
-                $redovi=$obj->select_sve("kafe");
+                $redovi=$obj->select_sve("radnici");
                 foreach($redovi as $red){
                     $id=$red["id"];
                    // echo $id;
             ?>
                 <tr>
                     <td><?php echo $red["id"];?></td>
-                    <td><?php echo $red["naziv"];?></td>
-                    <td><?php echo $red["zemlja_porekla"];?></td>
-                    <td><?php echo $red["cena"];?></td>
-                    <td><?php echo $red["kolicina"];?></td>
+                    <td><?php echo $red["ime"];?></td>
+                    <td><?php echo $red["prezime"];?></td>
+                    <td><?php echo $red["stepenstrucnespreme"];?></td>
+                    <td><?php echo $red["grad"];?></td>
+                    <!--KOD MENE NE VIDI OVA DVA DUGMETA JER MI PRIKAZUJE DA JE BAZA PRAZNA-->
                     <td><a href="izmena.php?update=1&id=<?php echo $id;?>" class="btn btn-primary">Izmeni</a></td>
                     <td><button  class="btn btn-danger" id="<?php echo $red["id"];?>" onClick="obrisi(this);"> Obrisi </button></td>
                 </tr>
@@ -49,6 +51,7 @@
                 }
             ?>
         </table><br><br><br>
+        <!--KLIKOM NA DUGME VRATI SE SE VRACAMO NA STRANICU ZA UNOS RADNIKA-->
         <a href="unos.php" class="btn btn-secondary">Vrati se</a>
     </div>
 
@@ -99,7 +102,7 @@
             }
         }
     }
-
+       //KADA ZELIMO DA OBRISEMO RADNIKA POZIVA SE delete.php za brisanje radnika
         function obrisi(x){
             var el=x;
             var id=x.id;

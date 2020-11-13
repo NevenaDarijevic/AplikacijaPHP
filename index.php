@@ -6,9 +6,9 @@
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="new_style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="new_style.css"> <!-- koriscenje new_style.css-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!--AJAX koji nam omogucava registraciju i prijavu HR zaposlenog-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> <!--koriscenje bootstrapa-->
     <title>HR SEKTOR FIMA</title>
     
 </head>
@@ -68,7 +68,9 @@
         </form><br>
       
 </div>
+<!-- SKRIPTA 1- KAD SE ISPUNI FORMA ZA REGISTRACIJU POZIVA SE insert.php koja ubacuje novog HR zaposlenog-->
 <script>
+
         $('#reg_form').submit(function(event){
             event.preventDefault();
             const $podaci = $(this);
@@ -85,7 +87,7 @@
                 }
             });
         });
-
+        //PRILIKOM ULOGOVANJA HR ZAPOSLENOG PROVERAVA SE IZ login.php DA LI POSTOJI TAKAV ZAPOSLENI DA BI MOGAO DA NASTAVI DALJE
         $('#login_form').submit(function(event){
             event.preventDefault();
             const $podaci = $(this);
@@ -97,6 +99,7 @@
                 data: podaciZaSlanje,
                 success: function(response){
                     if(response=='ok'){
+                        //UKOLIKO ZAPOSLENI POSTOJI OTVARA MU SE STRANICA ZA UNOS NOVOG RADNIKA U BAZU
                         window.location.href='unos.php';
                     }
                     else{
