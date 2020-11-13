@@ -1,5 +1,5 @@
 <?php
-include "broker.php";
+include "konekcija.php";
 class Radnik extends Baza{
     
     public function insert_radnik($table, $vrednosti){

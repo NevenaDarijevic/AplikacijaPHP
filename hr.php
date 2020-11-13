@@ -1,5 +1,5 @@
 <?php
-include "broker.php";
+include "konekcija.php";
 class HRZaposleni extends Baza{
     
     public function insert_hr($vrednosti){

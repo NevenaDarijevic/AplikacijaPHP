@@ -21,7 +21,7 @@
     <div class="container">
         <table id="myTable" class="table table-bordered">
             <tr>
-            <!--PITATI MAJU STA JE OVO OVDE-->
+            <!--Kada se klikne na neki od naziva kolona izvrsice se sortiranje, sem za kolonu id-->
                 <th title="Ne mozes sortirati po ID">ID</th>
                 <th title="Sortiraj po imenu">Radnik <i class="fas fa-sort"></i></th>
                 <th title="Sortiraj po prezimenu">Prezime <i class="fas fa-sort"></i></th>
@@ -43,7 +43,7 @@
                     <td><?php echo $red["prezime"];?></td>
                     <td><?php echo $red["stepenstrucnespreme"];?></td>
                     <td><?php echo $red["grad"];?></td>
-                    <!--KOD MENE NE VIDI OVA DVA DUGMETA JER MI PRIKAZUJE DA JE BAZA PRAZNA-->
+               
                     <td><a href="izmena.php?update=1&id=<?php echo $id;?>" class="btn btn-primary">Izmeni</a></td>
                     <td><button  class="btn btn-danger" id="<?php echo $red["id"];?>" onClick="obrisi(this);"> Obrisi </button></td>
                 </tr>
