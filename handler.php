@@ -1,7 +1,7 @@
 <?php
 include "radnik.php";
 $k=new Radnik;
-
+//HANDLER OMOGUCAVA IZMENU I UBACIVANJE RADNIKA U BAZU
 if(isset($_POST["insert"])){
         $radnik=array(
             "id"=> $_POST["fid"],

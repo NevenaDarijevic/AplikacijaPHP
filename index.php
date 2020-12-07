@@ -16,6 +16,7 @@
     include "radnik.php";
 ?>
 <body>
+<!-- FORMA ZA PRIJAVU HR ZAPOSLENOG-->
 <div class="container">
         <form id="login_form">
         <h1>Prijava</h1>
@@ -32,7 +33,7 @@
             <button type="submit" id="b" name="login"  class="btn btn-secondary" >Uloguj se</button>
         </div>
         </form><br>
-    
+    <!-- FORMA ZA REGISTRACIJU HR ZAPOSLENOG-->
         <form id="reg_form" >
             <h1>Registracija</h1>
 
@@ -68,6 +69,9 @@
         </form><br>
       
 </div>
+
+<!-- KORISCENJE AJAXA ZA PRIJAVU I REGISTRACIJU HR ZAPOSLENOG
+-->
 <!-- SKRIPTA 1- KAD SE ISPUNI FORMA ZA REGISTRACIJU POZIVA SE insert.php koja ubacuje novog HR zaposlenog-->
 <script>
 

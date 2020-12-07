@@ -30,7 +30,7 @@
         <div class="form-group">
             <label for="fid">Id:</label><br>
             <input type="text"name="fid" class="form_control" value="<?php echo $id;?>" readonly>
-            <p style="color:red;">Id se ne moze naknadno menjati.<br> Za pomoc konaktirajte administratora.</p>
+            <p style="color:red;">Id se ne moze naknadno menjati.<br> Za pomoc kontaktirajte administratora.</p>
         </div>
         <div class="form-group">
             <label for="fime">Ime:</label><br>
@@ -63,6 +63,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+      <!-- VALIDACIJA POLJA -->
     <script>
     $(document).ready(function(){
 

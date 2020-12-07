@@ -23,7 +23,7 @@
             <tr>
             <!--Kada se klikne na neki od naziva kolona izvrsice se sortiranje, sem za kolonu id-->
                 <th title="Ne mozes sortirati po ID">ID</th>
-                <th title="Sortiraj po imenu">Radnik <i class="fas fa-sort"></i></th>
+                <th title="Sortiraj po imenu">Ime <i class="fas fa-sort"></i></th>
                 <th title="Sortiraj po prezimenu">Prezime <i class="fas fa-sort"></i></th>
                 <th title="Sortiraj po stepenu strucne spreme">Stepen strucne spreme <i class="fas fa-sort"></i></th>
                 <th title="Sortiraj po gradu">Grad <i class="fas fa-sort"></i></th>
@@ -56,6 +56,7 @@
     </div>
 
 
+  <!-- SORTIRANJE -->
 <script type="text/javascript">
     th=document.getElementsByTagName('th');
     th[0].addEventListener('click',function(){
@@ -102,6 +103,10 @@
             }
         }
     }
+
+        //BRISANJE RADNIKA NA DUGME OBRISI
+
+
        //KADA ZELIMO DA OBRISEMO RADNIKA POZIVA SE delete.php za brisanje radnika
         function obrisi(x){
             var el=x;

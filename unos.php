@@ -17,6 +17,7 @@
 ?>
 <body>
     <div class="container">
+    <!-- FORMA ZA UNOS NOVOG RADNIKA-->
         <form id="insert_form" method="post" action="handler.php">
         <h1>Unos novog radnika</h1>
         <h3>Unesite podatke o radniku</h3>
@@ -51,12 +52,16 @@
             </div>
         </form>
         <br>
+        <!-- DUGMAD NA DNU KOJA BACAJU NA DRUGE STRANICE-->
         <a href="show.php" id="b" class="btn btn-secondary" >Prikaz baze zaposlenih radnika FIMA</a>
         <a href="index.php" id="b" class="btn btn-danger">Odjavi se</a> 
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- PREKO JQUERY I JAVASCRIPT SMO IZVRISILI HENDLOVANJE GRESAKA VEZANIH ZA UNOS VRENDOSTI U POLJA FORME-->
+
     <script>
 
     $(document).ready(function(){
@@ -101,7 +106,7 @@
             }
         }
 
-        function provera_cena(){
+        function provera_prezime(){
             var prezime=$("#prezime").val();
             if(hasNumbers(prezime) || prezime.length==0){
                 prezime_error=true;
